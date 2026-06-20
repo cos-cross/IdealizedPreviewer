@@ -60,8 +60,8 @@ function parseSongPoolInput(rawText) {
   for (const line of lines) {
     const [rawTitle = '', rawArtist = '', rawLevel = ''] = line.split('|')
     const title = rawTitle.trim()
-    const artist = rawArtist.trim() || 'Unknown Artist'
-    const level = rawLevel.trim() || 'N/A'
+    const artist = rawArtist.trim() || 'Various Artists'
+    const level = rawLevel.trim() || 'Unknown'
 
     if (!title) {
       return { error: `存在空歌名行：${line}` }
@@ -145,6 +145,11 @@ function OtogeLettersPage() {
       return songPool.map((song, songIndex) => {
         const opened = new Set(previous[songIndex] ?? [])
         song.title.split('').forEach((char, charIndex) => {
+          if (('a' <= letter <= 'z' || 'A' <= letter <= 'Z') && ('a' <= char <= 'z' || 'A' <= char <= 'Z')){
+            if(char.toLowerCase() === letter.toLowerCase()) {
+              opened.add(charIndex)
+            }
+          }
           if (char === letter) {
             opened.add(charIndex)
           }
