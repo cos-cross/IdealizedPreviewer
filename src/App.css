@@ -1,0 +1,45 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.py-lg-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.navbar .nav-link.active {
+  color: var(--bs-primary);
+  font-weight: 600;
+}
+
+.otoge-answer-box {
+  border: 1px dashed #ced4da;
+  border-radius: 0.75rem;
+  background: #f8f9fa;
+  padding: 1rem;
+}
+
+.otoge-mask {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.otoge-pool-editor {
+  min-height: 11rem;
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.otoge-state-box {
+  min-height: 8rem;
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.otoge-song-card {
+  border: 1px solid #dee2e6;
+}
